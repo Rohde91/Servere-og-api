@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+ 
+</head>
+ 
+<body>
+  <div id="tekstfelt">
+    <p></p>
+  </div>
+ 
+  <div class="blogs content">
+   
+    <%
+        const blogs = [
+        {title: 'Yoshi finds eggs', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+        {title: 'Mario finds stars', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+        {title: 'How to defeat bowser', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+       ];
+    %>
+    
+    <h2>All Blogs</h2>
+    <% if (blogs.length > 0) { %>
+      <table>
+      <% blogs.forEach(blog => { %>
+        <tr>
+        <td><%= blog.title %></td>
+        <td><%= blog.snippet %></td>
+        </tr>
+      <% }) %>
+      </table>
+    <% } else { %>
+      <p>There are no blogs to display...</p>
+    <% } %>
+
+
+
+
+
+    <img src="bowie.jpg">
+ 
+  </div>
+
+
+  <div>
+    <br>
+    <a href="http://localhost:3000/">Alle blogs data hardcoded</a><br>
+    <a href="http://localhost:3000/dyn">Alle blogs data </a><br>
+    <a href="http://localhost:3000/get">Get blog</a><br>
+    <a href="http://localhost:3000/create">Create blog</a>
+    <a href="http://localhost:3000/del">Slet blog</a>
+
+  </div>
+</body>
+</html>

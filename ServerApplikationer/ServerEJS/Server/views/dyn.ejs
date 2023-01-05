@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+ 
+</head>
+
+<body>
+  <div id="tekstfelt">
+  <p></p>
+  </div>
+ 
+  <div class="blogs content">
+    <h2>All Blogs</h2>
+  
+  <table>
+    <% data.forEach(blog => { %> 
+      <tr>
+      <td><%= blog.title %></td>
+      <td><%= blog.author %></td>
+      </tr>
+    <% }) %>
+  </table>
+<!--
+  variabel navn blog  
+  ejx kodning når brug af <% %> som giver mulighed for at skrive det inden i html.
+  i nogle tilfælde skal man bruge <&= %> grundet at der er en værdi der skal udskrives her.
+-->
+  
+  <div id="tekstfelt2">
+
+  </div>
+</body>
+</html>
